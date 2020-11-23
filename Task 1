@@ -1,0 +1,2 @@
+str="Have a marvelous Monday"
+print(str[1:])

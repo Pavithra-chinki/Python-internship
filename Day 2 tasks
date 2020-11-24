@@ -1,0 +1,10 @@
+a=b=c=5
+print(a/10,b*50,c+60)
+
+str="emilyinparis"
+print(str.replace('i','G'))
+
+d=62
+e=66.6
+print(float(d))
+print(int(e))

@@ -1,0 +1,27 @@
+d1 = {'a': 100, 'b': 200, 'c':400}
+d2 = {'x': 300, 'y': 500, 'z':600}
+d = d1.copy()
+d.update(d2)
+print(d)
+
+
+dict = {"color": "Red", "model": "Mustang", "year": 1956}
+dict.pop("model")
+print(dict)
+
+
+l1= ['red', 'green', 'blue']
+l2 = ['600','400', '200']
+z=zip(l1,l2)
+newdict=dict(z)
+print(newdict)
+
+
+set1 = {"prerna", "sameer", "sulagna", "anurag", "aastha"}
+print(len(set1))
+
+set1 = {1,2,3,4,5}
+set2 = {4,5,6,7,8}
+print(set1-set2)
+sn1.difference_update(set2)
+print(set1)

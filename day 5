@@ -1,0 +1,35 @@
+def add(x,y):
+   sum = x + y
+   return sum
+def sub(x,y):
+    subtract = y - x
+    return subtract
+def multi(x,y):
+    multiplication = x * y
+    return multiplication
+def div(x,y):
+    division = x / y
+    return division   
+a=int(input("enter a value="))
+b=int(input("enter b value="))
+if(a<b):
+    print("addition=", add(a, b))
+    print("subtraction=", sub(a, b))
+    print("multiplication=", multi(a, b))
+    print("division=", div(a, b))
+else:
+    print("enter values according to a<b")
+    
+  
+  
+  
+def covid( name, temp = 98 ):
+   print ("patient name: ", name)
+   print ("body temperature :", temp)
+   return;
+
+covid("Prerna")
+covid("Sameer")
+covid("Himanshu")
+covid("Anurag")
+covid("Sulagna")

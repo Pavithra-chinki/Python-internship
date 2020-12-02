@@ -1,0 +1,57 @@
+#1. program for all cases which can string contains only a certain character set of characters
+import re
+def is_allowed_specific_char(string):
+    charRe = re.compile(r'[^a-zA-Z0-9.]')
+    string = charRe.search(string)
+    return not bool(string)
+
+print(is_allowed_specific_char("flapDeal^&%")) 
+print(is_allowed_specific_char("trigger123MAGIC"))
+
+
+#2. program that matches a word containing 'ab'
+import re
+def text(text):
+   patterns='ab.*$'
+   if re.search(patterns,text):
+       return "this string matches the pattern"
+   else:
+       return("this string does not match")
+print(text("play"))
+print(text("ablility"))
+print(text("abstract")
+
+
+#3. program to check for a number at the end of a word/sentence
+import re
+def end_num(string):
+    text = re.compile(r".*[0-9]$")
+    if text.match(string):
+        return True
+    else:
+        return False
+
+print(end_num('apple'))
+print(end_num('jaguar6'))
+
+
+#4. program to search the number (0-9) of length between 1 to 3 in a given string
+import re
+results = re.finditer(r"([0-9]{1,3})", "numbers 22, 12, 16, and 365 are important")
+print("Number of length 1 to 3")
+for n in results:
+     print(n.group(0))
+     
+     
+#5. program to match a string that contains only uppercase letters
+import re
+def text_match(text):
+        patterns = "^[A-Z]+$"
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+print(text_match("dog"))
+print(text_match("HOPEFULL"))
+

@@ -1,0 +1,28 @@
+#1. program using zip() function and list() function create merged list of tuples from the given two lists
+lst1=["Paris","Italy","London","Germany","England","Sweden"]
+lst2=[675,688,677876,776678,7658,8970]
+lst3=list(zip(lst1,lst2))
+print(lst3)
+
+
+#2. program to create range 1-8 and merge the given list with it and create new list of tuples
+lst1=["violet","red","blue","pink","black","brown","grey","yellow","green","white"]
+lst=list(zip(range(8),lst1))
+print(lst)
+
+
+#3. using sort() function sort the list in ascending order
+mylist = [1, 3, 4, 2,6,76,0] 
+mylist.sort() 
+print(mylist) 
+
+
+#4. program to filter the even numbers so that only odd numbers are passed to new list using filter function
+mylist = [1,2,6,7,13,14,12,17,16,53,67,34,75,48]
+def filterOddNum(in_num):
+    if(in_num % 2) == 0:
+        return False
+    else:
+        return True
+out_filter = filter(filterOddNum, mylist)
+print("Filtered list of odd numbers are: ", list(out_filter))

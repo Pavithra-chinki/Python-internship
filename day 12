@@ -1,0 +1,40 @@
+#json data: saved as "data.json"
+{
+   "book":[
+      {
+         "id":"444",
+         "language":"C",
+         "edition":"First",
+         "rating":"9.8",
+         "author":"Dennis Ritchie "
+      },
+      {
+         "id":"555",
+         "language":"C++",
+         "edition":"second",
+         "rating":"8.9",
+         "author":" Bjarne Stroustrup "
+      }
+   ]
+}  
+
+
+#in sql to import json file
+DECLARE @JSON VARCHAR(MAX)
+
+SELECT @JSON = BulkColumn
+FROM OPENROWSET 
+(BULK 'C:\file-location\my-data.json', SINGLE_CLOB) 
+AS j
+
+SELECT id, language, edition, rating, author, [owner], [data]
+INTO MyTableName
+  FROM OPENJSON (@JSON, '$.data.assets.parcels')
+  WITH (id VARCHAR(7),
+    id INT,
+    rating FLOAT,
+    edition CHAR,
+    author CHAR,
+    language VARCHAR(50),
+    [owner] VARCHAR(50), 
+    [data] NVARCHAR(MAX) AS JSON)

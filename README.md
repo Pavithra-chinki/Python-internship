@@ -1,2 +1,1 @@
-str="have a marvelous monday"
-print(str[1:])
+Internship from BEST ENLIST.
